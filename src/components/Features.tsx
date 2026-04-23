@@ -15,7 +15,7 @@ const Features = () => {
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: i * 0.2 }}
-                    className="bg-stone-800 p-6 rounded-2xl"
+                    className="bg-neutral-800 p-6 rounded-2xl"
                 >
                     <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
                     <p className="text-gray-400">{item.desc}</p>

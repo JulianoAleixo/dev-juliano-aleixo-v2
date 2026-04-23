@@ -176,7 +176,7 @@ const DesktopNavbar = ({
                             className={`flex items-center gap-2 text-lg font-medium transition-colors duration-200 select-none hover:text-white ${
                                 isActive
                                     ? "text-white"
-                                    : "text-stone-400 text-shadow-2xs text-shadow-black"
+                                    : "text-neutral-400 text-shadow-2xs text-shadow-black"
                             }`}
                         >
                             <motion.span
