@@ -8,3 +8,8 @@
 body {
     font-family: var(--font-sans);
 }
+
+@keyframes slider-autorun {
+    from { left: 100%; }
+    to   { left: calc(var(--item-width) * -1); }
+}
