@@ -12,22 +12,36 @@ const Description = () => {
                         {
                             icon: Monitor,
                             label: "Web Development",
-                            content: ["...", "..."],
+                            content: [
+                                "Single Page Applications (SPAs)", 
+                                "Landing pages and business websites",
+                                "Portfolios and personal websites",
+                            ],
                         },
                         {
                             icon: Smartphone,
                             label: "Mobile Development",
-                            content: ["...", "..."],
+                            content: [
+                                "Mobile-friendly websites apps", 
+                                "React Native mobile apps",
+                            ],
                         },
                         {
                             icon: Layers,
                             label: "UI/UX Design & Prototyping",
-                            content: ["...", "..."],
+                            content: [
+                                "UI design with Figma", 
+                                "UX research & improvements",
+                                "Interactive prototypes",
+                            ],
                         },
                         {
                             icon: Server,
                             label: "Backend & APIs",
-                            content: ["...", "..."],
+                            content: [
+                                "Flask RestAPI development", 
+                                "Database design and management",
+                            ],
                         },
                     ]}
                 />

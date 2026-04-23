@@ -3,14 +3,14 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Navbar from "../components/Navbar.jsx";
 import Hero from "../components/Hero.jsx";
 import Description from "../components/Description.jsx";
-import Features from "../components/Features.jsx";
 import Footer from "../components/Footer.jsx";
+import Divider from "../components/Divider";
 ---
 
 <MainLayout title="Dev Juliano Aleixo">
     <Navbar client:load />
     <Hero client:load />
     <Description client:load />
-    <!-- <Features client:load /> -->
+    <Divider client:load />
     <Footer />
 </MainLayout>
