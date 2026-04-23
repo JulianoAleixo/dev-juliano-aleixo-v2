@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@import '@fontsource-variable/montserrat';
+
+@theme {
+    --font-sans: 'Montserrat Variable', sans-serif;
+}
+
+body {
+    font-family: var(--font-sans);
+}
