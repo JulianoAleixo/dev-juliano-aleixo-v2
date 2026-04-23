@@ -1,43 +1,10 @@
+import { techItems } from "../constants/techItems";
 import Github from "../icons/Github";
 import Gmail from "../icons/Gmail";
 import Linkedin from "../icons/Linkedin";
 import Silk from "./Silk";
+import Slider from "./Slider";
 import SocialButton from "./SocialButton";
-
-const techStack = [
-    {
-        name: "TypeScript",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-    },
-    {
-        name: "React",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    },
-    {
-        name: "Next.js",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
-    },
-    {
-        name: "Tailwind CSS",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
-    },
-    {
-        name: "Node.js",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-    },
-    {
-        name: "HTML5",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-    },
-    {
-        name: "CSS3",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-    },
-    {
-        name: "Git",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-    },
-];
 
 const Hero = () => {
     return (
@@ -53,39 +20,48 @@ const Hero = () => {
                 />
             </div>
 
-            <div className="relative w-full min-h-screen flex flex-col overflow-hidden">
-                <div className="relative z-10 flex-1 flex items-center px-8 sm:px-16 lg:px-24 pt-24 pb-8">
-                    <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="relative w-full min-h-screen flex flex-col overflow-hidden px-8 sm:px-16 md:px-32 lg:px-48 py-16">
+                <div className="relative z-10 flex-1 flex items-center">
+                    <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-8 md:gap-16">
                         <div className="flex flex-col gap-6">
-                            <p className="text-white/50 text-sm sm:text-base tracking-widest uppercase font-light">
+                            <p className="text-white/70 tracking-widest font-medium text-lg sm:text-xl lg:text-2xl text-left">
                                 Hi, I'm Juliano Aleixo
                             </p>
 
-                            <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-[1.05] tracking-tight">
+                            <h1 className="text-5xl sm:text-7xl lg:text-7xl xl:text-8xl font-medium text-white leading-[1.05] tracking-tight text-left">
                                 Software
                                 <br />
                                 Engineer
                             </h1>
 
                             <div className="flex items-center gap-3 mt-2">
-                                <SocialButton href="#">
-                                    <Linkedin />
+                                <SocialButton
+                                    href="https://www.linkedin.com/in/dev-juliano-aleixo/"
+                                    className="h-16 w-16"
+                                >
+                                    <Linkedin className="size-8" />
                                 </SocialButton>
-                                <SocialButton href="#">
-                                    <Github />
+                                <SocialButton
+                                    href="https://github.com/JulianoAleixo"
+                                    className="h-16 w-16"
+                                >
+                                    <Github className="size-8" />
                                 </SocialButton>
-                                <SocialButton href="#">
-                                    <Gmail />
+                                <SocialButton
+                                    href="https://mail.google.com/mail/?view=cm&fs=1&to=juliano.aleixo@gmail.com"
+                                    className="h-16 w-16"
+                                >
+                                    <Gmail className="size-8" />
                                 </SocialButton>
                             </div>
                         </div>
 
-                        <div className="flex items-center lg:justify-end">
-                            <p className="text-white/60 text-lg sm:text-xl lg:text-2xl leading-relaxed max-w-md font-light">
+                        <div className="flex flex-1 items-center lg:justify-end">
+                            <p className="text-white/60 text-lg sm:text-xl lg:text-2xl xl:text-3xl leading-relaxed font-light text-right">
                                 Transforming ideas into interactive and seamless
                                 digital experiences with cutting-edge{" "}
                                 <span className="text-violet-400 font-normal">
-                                    frontend development
+                                    full-stack development
                                 </span>
                                 .
                             </p>
@@ -93,7 +69,7 @@ const Hero = () => {
                     </div>
                 </div>
 
-                {/* <Slider /> */}
+                <Slider items={techItems} duration={30} />
             </div>
         </section>
     );
