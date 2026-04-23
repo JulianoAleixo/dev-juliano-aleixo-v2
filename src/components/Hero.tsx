@@ -20,7 +20,7 @@ const Hero = () => {
                 />
             </div>
 
-            <div className="relative w-full min-h-screen flex flex-col overflow-hidden px-8 sm:px-16 md:px-32 lg:px-48 py-16">
+            <div className="relative w-full min-h-screen flex flex-col overflow-hidden px-8 sm:px-16 md:px-32 lg:px-48 pb-32 md:py-16">
                 <div className="relative z-10 flex-1 flex items-center">
                     <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-8 md:gap-16">
                         <div className="flex flex-col gap-6">

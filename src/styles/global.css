@@ -13,3 +13,9 @@ body {
     from { left: 100%; }
     to   { left: calc(var(--item-width) * -1); }
 }
+
+@media (max-width: 767px) {
+    body {
+        padding-bottom: 72px;
+    }
+}
