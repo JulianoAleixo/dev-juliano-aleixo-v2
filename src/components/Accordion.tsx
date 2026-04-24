@@ -39,7 +39,7 @@ function AccordionItem({
                 <span
                     className="w-8.5 h-8.5 rounded-lg flex items-center justify-center shrink-0 transition-colors duration-200"
                 >
-                    <Icon size={20} stroke="#7c6ff7" strokeWidth={2} />
+                    <Icon size={20} stroke="#7c3aed" strokeWidth={2} />
                 </span>
 
                 <span className="flex-1 text-[15px] font-medium text-white tracking-tight">
