@@ -8,7 +8,7 @@ import SocialButton from "./SocialButton";
 
 const Hero = () => {
     return (
-        <section className="relative w-full min-h-screen flex items-center justify-center text-center">
+        <section id="home" className="relative w-full min-h-screen flex items-center justify-center text-center">
             {/* Background */}
             <div className="absolute inset-0">
                 <Silk
