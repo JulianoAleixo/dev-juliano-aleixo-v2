@@ -1,23 +1,30 @@
+import { lazy, Suspense } from "react";
 import { techItems } from "../constants/techItems";
 import Github from "../icons/Github";
 import Gmail from "../icons/Gmail";
 import Linkedin from "../icons/Linkedin";
-import Silk from "./Silk";
 import Slider from "./Slider";
 import SocialButton from "./SocialButton";
 
+const Silk = lazy(() => import("./Silk"));
+
 const Hero = () => {
     return (
-        <section id="home" className="relative w-full min-h-screen flex items-center justify-center text-center">
+        <section
+            id="home"
+            className="relative w-full min-h-screen flex items-center justify-center text-center"
+        >
             {/* Background */}
             <div className="absolute inset-0">
-                <Silk
-                    speed={5}
-                    scale={1}
-                    color="#7B7481"
-                    noiseIntensity={1.5}
-                    rotation={0}
-                />
+                <Suspense fallback={null}>
+                    <Silk
+                        speed={5}
+                        scale={1}
+                        color="#7B7481"
+                        noiseIntensity={1.5}
+                        rotation={0}
+                    />
+                </Suspense>
             </div>
 
             <div className="relative w-full min-h-screen flex flex-col overflow-hidden px-8 sm:px-16 md:px-32 lg:px-48 pb-32 md:py-16">

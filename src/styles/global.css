@@ -9,9 +9,13 @@ body {
     font-family: var(--font-sans);
 }
 
-@keyframes slider-autorun {
-    from { left: 100%; }
-    to   { left: calc(var(--item-width) * -1); }
+@keyframes slide {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+@keyframes fadein {
+    to { opacity: 1; }
 }
 
 @keyframes pop {

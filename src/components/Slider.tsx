@@ -4,54 +4,43 @@ interface SliderItem {
     text?: string;
 }
 
-interface InfiniteSliderProps {
+interface SliderProps {
     items: SliderItem[];
-    itemWidth?: number;
-    height?: number;
     duration?: number;
     className?: string;
 }
 
-const Slider: React.FC<InfiniteSliderProps> = ({
+const Slider: React.FC<SliderProps> = ({
     items,
-    itemWidth = 200,
-    height = 54,
-    duration = 20,
+    duration = 25,
     className = "",
 }) => {
-    const quantity = items.length;
+    const doubled = [...items, ...items];
 
     return (
         <div
-            className={`group relative w-full overflow-hidden mask-[linear-gradient(to_right,transparent,#000_15%,#000_85%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,#000_15%,#000_85%,transparent)] ${className}`}
-            style={{ height }}
+            className={`group overflow-hidden w-full [mask-image:linear-gradient(to_right,transparent,#000_12%,#000_88%,transparent)]mask-[linear-gradient(to_right,transparent,#000_12%,#000_88%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,#000_12%,#000_88%,transparent)] ${className}`}
         >
             <div
-                className="relative flex h-full"
-                style={{ minWidth: itemWidth * quantity }}
+                className="flex w-max animate-[slide_var(--duration)_linear_infinite] hover:[animation-play-state:paused]"
+                style={{ "--duration": `${duration}s` } as React.CSSProperties}
             >
-                {items.map((item, index) => (
+                {doubled.map((item, index) => (
                     <div
                         key={index}
-                        className="absolute left-full flex flex-row items-center justify-center gap-3 animate-[slider-autorun_var(--duration)_linear_infinite] transition-[filter] duration-500 ease-in-out group-hover:[animation-play-state:paused] group-hover:filter-[grayscale(1)_brightness(0.8)] hover:filter-[grayscale(0)_brightness(1)]!"
-                        style={
-                            {
-                                width: itemWidth,
-                                height,
-                                "--duration": `${duration}s`,
-                                "--item-width": `${itemWidth}px`,
-                                animationDelay: `calc((${duration}s / ${quantity}) * (${index} - 1))`,
-                            } as React.CSSProperties
-                        }
+                        className="flex items-center gap-3 px-7 whitespace-nowrap transition-all duration-300 group-hover:opacity-40 group-hover:grayscale hover:opacity-100! hover:grayscale-0!"
                     >
                         <img
                             src={item.image}
-                            alt={item.alt ?? item.text ?? `Slide ${index + 1}`}
-                            className="shrink-0 object-contain"
-                            style={{ width: height, height }}
+                            alt={item.alt ?? item.text ?? ""}
+                            width={54}
+                            height={54}
+                            loading="lazy"
+                            decoding="async"
+                            className="object-contain"
                         />
                         {item.text && (
-                            <span className="truncate text-sm font-semibold leading-none">
+                            <span className="text-sm font-semibold">
                                 {item.text}
                             </span>
                         )}
