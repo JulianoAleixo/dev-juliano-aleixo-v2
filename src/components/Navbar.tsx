@@ -57,9 +57,9 @@ const MobileDock = ({
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.4, ease: "easeOut", delay: 0.1 }}
-            className="fixed bottom-0 left-0 right-0 z-50 flex justify-center pb-0 md:hidden"
+            className="fixed bottom-0 left-0 right-0 z-50 flex justify-center pb-0 md:hidden pointer-events-none"
         >
-            <nav className="w-full flex items-center justify-around px-6 py-3 pt-4 bg-[rgba(9,11,12,0.72)] backdrop-blur-[20px] border-t border-[rgba(255,255,255,0.07)] rounded-tl-2xl rounded-tr-2xl">
+            <nav className="pointer-events-auto w-full flex items-center justify-around px-6 py-3 pt-4 bg-[rgba(9,11,12,0.72)] backdrop-blur-[20px] border-t border-[rgba(255,255,255,0.07)] rounded-tl-2xl rounded-tr-2xl">
                 {NAV_ITEMS.map(({ label, href, sectionId, icon }) => {
                     const isActive = activeSection === sectionId;
                     return (
