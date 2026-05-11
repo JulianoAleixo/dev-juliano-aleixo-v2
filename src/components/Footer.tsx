@@ -10,7 +10,7 @@ import TechStack from "./TechStack";
 const Footer = () => {
     return (
         <footer className="flex flex-col p-4 mx-12">
-            <div className="flex flex-row justify-around items-center">
+            <div className="flex flex-col md:flex-row justify-around items-center gap-8">
                 <div className="flex flex-col gap-4">
                     <div className="flex flex-row justify-center align-center gap-4">
                         <SocialButton
