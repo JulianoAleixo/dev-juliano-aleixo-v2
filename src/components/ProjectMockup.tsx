@@ -20,6 +20,7 @@ const ProjectMockup = ({
                 <img
                     src={imageUrl}
                     alt={title}
+                    loading="lazy"
                     className="rounded-xl w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
                 />
             </div>

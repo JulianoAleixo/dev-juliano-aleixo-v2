@@ -35,7 +35,7 @@ const Slider: React.FC<SliderProps> = ({
                             alt={item.alt ?? item.text ?? ""}
                             width={54}
                             height={54}
-                            loading="lazy"
+                            loading="eager"
                             decoding="async"
                             className="object-contain"
                         />
