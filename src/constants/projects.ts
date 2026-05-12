@@ -14,11 +14,11 @@ export const projects = [
         imageUrl: "/assets/dra-maria-luiza-renno.png",
     },
     {
-        title: "Pomodoro Timer App",
-        status: "Deployed",
-        projectUrl: "https://pomodoro-app-sandy-rho.vercel.app",
-        repositoryUrl: "https://github.com/JulianoAleixo/pomodoro",
-        imageUrl: "/assets/pomodoro-timer.png",
+        title: "Divide Aí",
+        status: "On Development",
+        projectUrl: false,
+        repositoryUrl: "https://github.com/C14-INATEL/divide-ai-front",
+        imageUrl: "/assets/divide-ai.png",
     },
     {
         title: "DaisyUI Theme Changer",

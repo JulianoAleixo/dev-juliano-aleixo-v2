@@ -10,7 +10,7 @@ const ProjectMockup = ({
 }: {
     title: string;
     status: string;
-    projectUrl: string;
+    projectUrl: string | boolean;
     repositoryUrl: string | boolean;
     imageUrl: string;
 }) => {
@@ -34,11 +34,19 @@ const ProjectMockup = ({
                     </p>
                 </div>
                 <div className="flex flex-row gap-4">
-                    <SocialButton href={projectUrl} ariaLabel="Go to project">
-                        <ExternalLink />
-                    </SocialButton>
+                    {projectUrl && typeof projectUrl === "string" && (
+                        <SocialButton
+                            href={projectUrl}
+                            ariaLabel="Go to project"
+                        >
+                            <ExternalLink />
+                        </SocialButton>
+                    )}
                     {repositoryUrl && typeof repositoryUrl === "string" && (
-                        <SocialButton href={repositoryUrl} ariaLabel="Go to code repository">
+                        <SocialButton
+                            href={repositoryUrl}
+                            ariaLabel="Go to code repository"
+                        >
                             <CodeXml />
                         </SocialButton>
                     )}
