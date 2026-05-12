@@ -33,11 +33,11 @@ const ProjectMockup = ({
                     </p>
                 </div>
                 <div className="flex flex-row gap-4">
-                    <SocialButton href={projectUrl}>
+                    <SocialButton href={projectUrl} ariaLabel="Go to project">
                         <ExternalLink />
                     </SocialButton>
                     {repositoryUrl && typeof repositoryUrl === "string" && (
-                        <SocialButton href={repositoryUrl}>
+                        <SocialButton href={repositoryUrl} ariaLabel="Go to code repository">
                             <CodeXml />
                         </SocialButton>
                     )}

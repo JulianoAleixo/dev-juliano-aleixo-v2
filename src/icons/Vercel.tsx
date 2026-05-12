@@ -5,6 +5,7 @@ const Vercel = ({ className = "" }: { className?: string }) => (
         fill="currentColor"
         xmlns="http://www.w3.org/2000/svg"
     >
+        <title>Vercel</title>
         <path d="M128 0L256 221.705H0L128 0Z" />
     </svg>
 );
