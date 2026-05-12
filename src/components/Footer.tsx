@@ -4,8 +4,8 @@ import Gmail from "../icons/Gmail";
 import Linkedin from "../icons/Linkedin";
 import Divider from "./Divider";
 import SocialButton from "./SocialButton";
-import { LikeButton } from "./LikeButton";
 import TechStack from "./TechStack";
+import LikeButton from "./LikeButton";
 
 const Footer = () => {
     return (
